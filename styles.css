@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #00ff00; /* Start with green */
+    margin: 0;
+    transition: background-color 0.5s; /* Smooth transition for background color */
+}
+
+.container, .game-over-container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.game-over-container {
+    display: none; /* Hide the game over screen by default */
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#feedback {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.code-redeem {
+    margin-top: 20px;
+}
+
+#redeemCodeInput {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#restartButton {
+    position: absolute;
+    top: -1px; 
+    right: 150px; /* Adjusted to position to the left of resetButton */
+}
+
+#resetButton {
+    position: absolute;
+    top: -1px; 
+    right: 10px;
+}
+
+.easter-egg {
+    display: none;
+    position: absolute;
+    background: yellow;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 14px;
+}

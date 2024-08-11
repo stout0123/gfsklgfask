@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Guess the Number Game</h1>
+        <button onclick="resetGame()" id="restartButton">Restart Game</button>
+        <button onclick="resetAttempts()" id="resetButton">Reset Attempts</button>
+        <p>Guess a number between 1 and 100. You have <span id="attemptsLeft">10</span> attempts.</p>
+        <input type="number" id="guessInput" min="1" max="100">
+        <button onclick="checkGuess()">Submit Guess</button>
+        <p id="feedback"></p>
+        <p id="attempts">Attempts: 0/13</p>
+        <p id="level">Level: 1</p>
+        <div class="code-redeem">
+            <input type="text" id="redeemCodeInput" placeholder="Enter code">
+            <button onclick="redeemCode()">Enter Code</button>
+        </div>
+        <div id="easterEgg" class="easter-egg"></div>
+    </div>
+    <div class="game-over-container" id="gameOverScreen">
+        <h1>Game Over</h1>
+        <p id="gameOverMessage"></p>
+        <button onclick="restartGame()">Try Again</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
