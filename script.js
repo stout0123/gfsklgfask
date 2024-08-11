@@ -1,11 +1,6 @@
 // Array of available apps with deep links
 const availableApps = [
-    { id: 'app1', name: 'Google Maps', link: 'geo:0,0?q=restaurants' },
-    { id: 'app2', name: 'YouTube', link: 'vnd.youtube://www.youtube.com/watch?v=example' },
-    { id: 'app3', name: 'Twitter', link: 'twitter://user?screen_name=example' },
-    { id: 'app4', name: 'WhatsApp', link: 'whatsapp://send?text=Hello' },
-    { id: 'app5', name: 'Facebook', link: 'fb://profile/12345' },
-    { id: 'app6', name: 'Mistplay', link: 'mistplay://app' } // Mistplay entry
+    { id: 'mistplay', name: 'Mistplay', link: 'mistplay://open' }
 ];
 
 // Populate the select dropdown with available apps
@@ -32,7 +27,7 @@ function loadApp() {
         const appFrame = document.createElement('div');
         appFrame.classList.add('app-frame');
         appFrame.innerHTML = `<h2>${selectedApp.name} - Instance ${i}</h2>
-                              <p><a href="${selectedApp.link}">Open ${selectedApp.name}</a></p>`;
+                              <p><a href="${selectedApp.link}" target="_blank">Open ${selectedApp.name}</a></p>`;
         appContainer.appendChild(appFrame);
     }
 }
