@@ -3,24 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-App Runner</title>
+    <title>Web App Runner</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Multi-App Runner</h1>
+    <h1>Web App Runner</h1>
     <div id="app-selector">
         <label for="app-select">Choose an App:</label>
         <select id="app-select" onchange="loadApp()">
             <option value="" disabled selected>Select an app</option>
-            <option value="app1">App 1</option>
-            <option value="app2">App 2</option>
-            <option value="app3">App 3</option>
-            <option value="app4">App 4</option>
-            <option value="app5">App 5</option>
+            <!-- Populate this list with available apps -->
         </select>
     </div>
     <div id="app-container">
-        <!-- Apps will be loaded here -->
+        <!-- Selected apps will be displayed here -->
     </div>
     <script src="script.js"></script>
 </body>
