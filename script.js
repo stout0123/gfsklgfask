@@ -1,10 +1,11 @@
-// Array of available apps - you can populate this dynamically or manually
+// Array of available apps with deep links
 const availableApps = [
-    { id: 'app1', name: 'App 1' },
-    { id: 'app2', name: 'App 2' },
-    { id: 'app3', name: 'App 3' },
-    { id: 'app4', name: 'App 4' },
-    { id: 'app5', name: 'App 5' }
+    { id: 'app1', name: 'Google Maps', link: 'geo:0,0?q=restaurants' },
+    { id: 'app2', name: 'YouTube', link: 'vnd.youtube://www.youtube.com/watch?v=example' },
+    { id: 'app3', name: 'Twitter', link: 'twitter://user?screen_name=example' },
+    { id: 'app4', name: 'WhatsApp', link: 'whatsapp://send?text=Hello' },
+    { id: 'app5', name: 'Facebook', link: 'fb://profile/12345' },
+    { id: 'app6', name: 'Mistplay', link: 'mistplay://app' } // Mistplay entry
 ];
 
 // Populate the select dropdown with available apps
@@ -30,7 +31,8 @@ function loadApp() {
     for (let i = 1; i <= 5; i++) {
         const appFrame = document.createElement('div');
         appFrame.classList.add('app-frame');
-        appFrame.innerHTML = `<h2>${selectedApp.name} - Instance ${i}</h2><p>This is a version of ${selectedApp.name} running...</p>`;
+        appFrame.innerHTML = `<h2>${selectedApp.name} - Instance ${i}</h2>
+                              <p><a href="${selectedApp.link}">Open ${selectedApp.name}</a></p>`;
         appContainer.appendChild(appFrame);
     }
 }
