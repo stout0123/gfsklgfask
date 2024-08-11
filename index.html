@@ -3,19 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-Account Web App</title>
+    <title>Mistplay Earnings Tracker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Multi-Account Web App</h1>
-    <div class="container">
-        <iframe id="account1" class="account" src=""></iframe>
-        <iframe id="account2" class="account" src=""></iframe>
-        <iframe id="account3" class="account" src=""></iframe>
-        <iframe id="account4" class="account" src=""></iframe>
-        <iframe id="account5" class="account" src=""></iframe>
+    <h1>Mistplay Earnings Tracker</h1>
+    <div class="tracker">
+        <label for="game">Game Name:</label>
+        <input type="text" id="game" placeholder="Enter game name">
+        
+        <label for="earnings">Earnings:</label>
+        <input type="number" id="earnings" placeholder="Enter earnings">
+        
+        <label for="time">Time Spent (minutes):</label>
+        <input type="number" id="time" placeholder="Enter time spent">
+        
+        <button onclick="addGame()">Add Game</button>
     </div>
-    <button onclick="loadPages()">Load Pages</button>
-    <script src="script.js"></script>
+    
+    <h2>Game History</h2>
+    <ul id="gameList"></ul>
+    
+    <h2>Total Earnings: <span id="totalEarnings">0</span></h2>
 </body>
+<script src="script.js"></script>
 </html>
