@@ -25,9 +25,18 @@ h1 {
     border: 1px solid #ccc;
     background-color: #fff;
     width: 300px;
-    height: 400px;
+    height: 150px;
     margin: 10px;
     padding: 10px;
     overflow: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.app-frame h2 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.app-frame p {
+    font-size: 14px;
 }
