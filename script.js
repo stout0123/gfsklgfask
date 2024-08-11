@@ -1,26 +1,35 @@
-let totalEarnings = 0;
+function loadApp() {
+    const appSelect = document.getElementById('app-select');
+    const selectedApp = appSelect.value;
+    
+    const appContainer = document.getElementById('app-container');
+    appContainer.innerHTML = ''; // Clear previous apps
 
-function addGame() {
-    const gameName = document.getElementById('game').value;
-    const earnings = parseFloat(document.getElementById('earnings').value);
-    const timeSpent = parseFloat(document.getElementById('time').value);
+    // Generate 5 instances of the selected app
+    for (let i = 1; i <= 5; i++) {
+        const appFrame = document.createElement('div');
+        appFrame.classList.add('app-frame');
 
-    if (gameName && earnings && timeSpent) {
-        // Update total earnings
-        totalEarnings += earnings;
-        document.getElementById('totalEarnings').textContent = totalEarnings.toFixed(2);
-        
-        // Add game to the list
-        const gameList = document.getElementById('gameList');
-        const li = document.createElement('li');
-        li.textContent = `${gameName} - $${earnings.toFixed(2)} earned in ${timeSpent} minutes`;
-        gameList.appendChild(li);
+        switch (selectedApp) {
+            case 'app1':
+                appFrame.innerHTML = `<h2>App 1 - Instance ${i}</h2><p>This is a version of App 1 running...</p>`;
+                break;
+            case 'app2':
+                appFrame.innerHTML = `<h2>App 2 - Instance ${i}</h2><p>This is a version of App 2 running...</p>`;
+                break;
+            case 'app3':
+                appFrame.innerHTML = `<h2>App 3 - Instance ${i}</h2><p>This is a version of App 3 running...</p>`;
+                break;
+            case 'app4':
+                appFrame.innerHTML = `<h2>App 4 - Instance ${i}</h2><p>This is a version of App 4 running...</p>`;
+                break;
+            case 'app5':
+                appFrame.innerHTML = `<h2>App 5 - Instance ${i}</h2><p>This is a version of App 5 running...</p>`;
+                break;
+            default:
+                appFrame.innerHTML = `<h2>Unknown App</h2><p>Select an app from the dropdown.</p>`;
+        }
 
-        // Clear input fields
-        document.getElementById('game').value = '';
-        document.getElementById('earnings').value = '';
-        document.getElementById('time').value = '';
-    } else {
-        alert('Please fill in all fields');
+        appContainer.appendChild(appFrame);
     }
 }
