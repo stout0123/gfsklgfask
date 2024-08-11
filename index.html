@@ -3,28 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mistplay Earnings Tracker</title>
+    <title>Multi-App Runner</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Mistplay Earnings Tracker</h1>
-    <div class="tracker">
-        <label for="game">Game Name:</label>
-        <input type="text" id="game" placeholder="Enter game name">
-        
-        <label for="earnings">Earnings:</label>
-        <input type="number" id="earnings" placeholder="Enter earnings">
-        
-        <label for="time">Time Spent (minutes):</label>
-        <input type="number" id="time" placeholder="Enter time spent">
-        
-        <button onclick="addGame()">Add Game</button>
+    <h1>Multi-App Runner</h1>
+    <div id="app-selector">
+        <label for="app-select">Choose an App:</label>
+        <select id="app-select" onchange="loadApp()">
+            <option value="" disabled selected>Select an app</option>
+            <option value="app1">App 1</option>
+            <option value="app2">App 2</option>
+            <option value="app3">App 3</option>
+            <option value="app4">App 4</option>
+            <option value="app5">App 5</option>
+        </select>
     </div>
-    
-    <h2>Game History</h2>
-    <ul id="gameList"></ul>
-    
-    <h2>Total Earnings: <span id="totalEarnings">0</span></h2>
+    <div id="app-container">
+        <!-- Apps will be loaded here -->
+    </div>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
